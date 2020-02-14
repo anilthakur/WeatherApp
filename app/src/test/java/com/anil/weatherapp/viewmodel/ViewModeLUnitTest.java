@@ -39,9 +39,9 @@ public class ViewModeLUnitTest {
         if (weatherRepositorty == null) {
             weatherRepositorty = new WeatherRepositorty();
         }
-        weatherRepositorty = WeatherRepositorty.getInstance();
-        weatherMutableLiveData = weatherRepositorty.getWeatherData("Bangalore,karnataka", "metric", "8887e1c31f3251430bf8523f2647c959");
-        foreCastWeatherMutableLiveData = weatherRepositorty.getForeCastWeatherData("Bangalore,karnataka", "metric", "8887e1c31f3251430bf8523f2647c959");
+//        weatherRepositorty = WeatherRepositorty.getInstance();
+//        weatherMutableLiveData = weatherRepositorty.getWeatherData("Bangalore,karnataka", "metric", "8887e1c31f3251430bf8523f2647c959");
+//        foreCastWeatherMutableLiveData = weatherRepositorty.getForeCastWeatherData("Bangalore,karnataka", "metric", "8887e1c31f3251430bf8523f2647c959");
     }
 
     @Test
@@ -51,12 +51,12 @@ public class ViewModeLUnitTest {
 //        assertTrue(viewModel.getNewsListState().hasObservers());
 
 
-
         when(viewModel).thenReturn(null);
         assertNotNull(viewModel.getWeatherResponse());
 //        assertTrue(viewModel.getNewsListState().hasObservers());
     }
-//
+
+    //
 //    @Test
 //    public void testApiFetchDataSuccess() {
 //        // Mock API response
@@ -68,9 +68,9 @@ public class ViewModeLUnitTest {
 //
     @Test
     public void testApiFetchDataError() {
-        viewModel.init("Bangalore,karnataka", "metric", "8887e1c31f3251430bf8523f2647c959");
+//        viewModel.init("Bangalore,karnataka", "metric", "8887e1c31f3251430bf8523f2647c959");
 //
-        verify(weatherMutableLiveData,null);
+        verify(weatherMutableLiveData, null);
 //        verify(observer).onChanged(NewsListViewState.ERROR_STATE);
     }
 
